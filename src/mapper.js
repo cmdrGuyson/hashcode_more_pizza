@@ -1,4 +1,6 @@
 const readline = require("readline");
+const calculateSlices = require("./calculateSlices");
+const sort = require("./sort");
 
 module.exports = readStream => {
   const rl = readline.createInterface({
@@ -24,9 +26,8 @@ module.exports = readStream => {
       pizzas.maxSlices = parseInt(input[0], 10);
       pizzas.noOfTypes = parseInt(input[1], 10);
     } else {
-      //new instance of Image
       for (i = 0; i < pizzas.noOfTypes; i++) {
-        pizzas.types.push(input[i]);
+        pizzas.types.push(parseInt(input[i], 10));
       }
     }
     counter++;
@@ -34,10 +35,7 @@ module.exports = readStream => {
 
   //runs once the end of the file is reached
   rl.on("close", function() {
-    //allTags = Array.from(new Set(allTags));
-    //file.setImages(imageArray);
-    //file.setAllTags(allTags);
-    //makeSlides(file);
-    console.log(pizzas);
+    calculateSlices(pizzas);
+    sort(pizzas);
   });
 };
