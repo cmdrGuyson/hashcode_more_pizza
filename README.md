@@ -1,4 +1,4 @@
-<img src="More Pizza.jpg>
+<img src="images/More Pizza.jpg>
 
 ##More Pizza
 ###Google Hashcode 2020 Practice Question
