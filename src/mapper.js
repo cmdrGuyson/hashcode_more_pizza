@@ -1,4 +1,5 @@
 const readline = require("readline");
+const sort = require("./sort");
 
 module.exports = readStream => {
   const rl = readline.createInterface({
@@ -34,10 +35,6 @@ module.exports = readStream => {
 
   //runs once the end of the file is reached
   rl.on("close", function() {
-    //allTags = Array.from(new Set(allTags));
-    //file.setImages(imageArray);
-    //file.setAllTags(allTags);
-    //makeSlides(file);
-    console.log(pizzas);
+    sort(pizzas);
   });
 };
