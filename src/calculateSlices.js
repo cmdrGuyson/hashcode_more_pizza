@@ -1,10 +1,11 @@
 const array = require("array");
 const exporter = require("./export");
 
+/* GREEDY METHOD */
+
 module.exports = (arr, filename) => {
   let pizzaArray = array(arr.types);
   let neededSum = arr.maxSlices;
-  let no = arr.noOfTypes;
   let sum = 0;
   let first = true;
   let i = pizzaArray.length - 1;
