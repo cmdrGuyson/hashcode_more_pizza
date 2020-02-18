@@ -1,59 +1,16 @@
-let w = [
-  0,
-  7,
-  12,
-  12,
-  13,
-  14,
-  28,
-  29,
-  29,
-  30,
-  32,
-  32,
-  34,
-  41,
-  45,
-  46,
-  56,
-  61,
-  61,
-  62,
-  63,
-  65,
-  68,
-  76,
-  77,
-  77,
-  92,
-  93,
-  94,
-  97,
-  103,
-  113,
-  114,
-  114,
-  120,
-  135,
-  145,
-  145,
-  149,
-  156,
-  157,
-  160,
-  169,
-  172,
-  179,
-  184,
-  185,
-  189,
-  194,
-  195,
-  195
-];
-let C = 4500;
-let n = 50;
+const fs = require("fs");
+
+const contents = fs.readFileSync("../input/c_medium.in", "utf8");
+const lines = contents.split("\n");
+const lineOne = lines[0].split(" ");
+const lineTwo = lines[1].split(" ");
+
+let w = lineTwo.map(Number);
+w.unshift(0);
+let C = parseInt(lineOne[0], 10);
+let n = parseInt(lineOne[1], 10);
 let result = 0;
+let solution = [];
 const arr = new Array(C).fill(null).map(() => new Array(n).fill(null));
 
 const KS = (n, C) => {
