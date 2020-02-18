@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const readline = require("readline");
 const fs = require("fs");
 const mapper = require("./src/mapper");
@@ -34,4 +32,3 @@ rl.question("Input file name ", answer => {
   mapper(readStream);
   rl.close();
 });
->>>>>>> Stashed changes
