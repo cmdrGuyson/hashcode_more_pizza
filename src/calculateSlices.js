@@ -7,6 +7,7 @@ module.exports = calculateSlices = arr => {
   let sum = 0;
   let first = true;
   let i = pizzaArray.length - 1;
+
   while (i >= 0) {
     if (first) {
       sum = sum + pizzaArray[i];
@@ -21,4 +22,5 @@ module.exports = calculateSlices = arr => {
     }
   }
   console.log(sum);
+  console.log(`Lost score ${arr.maxSlices - sum}`);
 };
