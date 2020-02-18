@@ -2,7 +2,7 @@ const readline = require("readline");
 const calculateSlices = require("./calculateSlices");
 const sort = require("./sort");
 
-module.exports = readStream => {
+module.exports = (readStream, filename) => {
   const rl = readline.createInterface({
     input: readStream,
     crlfDelay: Infinity
@@ -35,7 +35,7 @@ module.exports = readStream => {
 
   //runs once the end of the file is reached
   rl.on("close", function() {
-    calculateSlices(pizzas);
+    calculateSlices(pizzas, filename);
     //sort(pizzas);
   });
 };

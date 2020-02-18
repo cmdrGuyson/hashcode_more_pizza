@@ -29,6 +29,6 @@ rl.question("Input file name ", answer => {
       break;
   }
   var readStream = fs.createReadStream(`./input/${file}.in`, "utf8");
-  mapper(readStream);
+  mapper(readStream, file);
   rl.close();
 });
