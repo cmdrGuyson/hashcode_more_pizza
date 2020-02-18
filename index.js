@@ -12,7 +12,7 @@ let file;
 rl.question("Input file name ", answer => {
   console.log(`Reading file name: ${answer}`);
   file = answer;
-  var readStream = fs.createReadStream(`./input/${file}.txt`, "utf8");
+  var readStream = fs.createReadStream(`./input/${file}.in`, "utf8");
   mapper(readStream);
   rl.close();
 });
