@@ -1,7 +1,8 @@
-<img src="images/More Pizza.jpg>
+<img src="images/More Pizza.jpg">
 
-##More Pizza
-###Google Hashcode 2020 Practice Question
+## More Pizza
+
+### Google Hashcode 2020 Practice Question
 
 This repository consists of a couple of different solutions for the 2020 Google Hashcode Practice Question - More Pizza.
 
