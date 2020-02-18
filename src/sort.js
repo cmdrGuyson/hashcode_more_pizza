@@ -26,15 +26,15 @@ module.exports = pizzas => {
 
       if (tempSum === max) {
         sum = tempSum;
-        currentIndexList.unshift(i);
-        currentValueList.shift(currentValue);
+        currentIndexList.push(i);
+        currentValueList.push(currentValue);
         break;
       } else if (tempSum > max) {
         continue;
       } else if (tempSum < max) {
         sum = tempSum;
-        currentIndexList.unshift(i);
-        currentIndexList.unshift(currentValue);
+        currentIndexList.push(i);
+        currentValueList.push(currentValue);
         continue;
       }
     }
@@ -45,11 +45,11 @@ module.exports = pizzas => {
       solutionValueList = [];
 
       currentIndexList.forEach(element => {
-        solutionIndexList.unshift(element);
+        solutionIndexList.push(element);
       });
 
       currentValueList.forEach(element => {
-        solutionValueList.unshift(element);
+        solutionValueList.push(element);
       });
     }
 
@@ -72,5 +72,5 @@ module.exports = pizzas => {
 
   console.log(`score: ${maxScore}`);
 
-  return solutionIndexList;
+  return solutionIndexList.reverse();
 };
