@@ -1,6 +1,7 @@
 const readline = require("readline");
 const calculateSlices = require("./calculateSlices");
 const sort = require("./sort");
+const exporter = require("./export");
 
 module.exports = (readStream, filename) => {
   const rl = readline.createInterface({
@@ -36,7 +37,7 @@ module.exports = (readStream, filename) => {
   //runs once the end of the file is reached
   rl.on("close", function() {
     //calculateSlices(pizzas, filename);
-    //sort(pizzas);
-    console.log(sort(pizzas));
+    let selected = sort(pizzas);
+    exporter(filename, selected);
   });
 };
