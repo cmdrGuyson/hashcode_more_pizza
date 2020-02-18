@@ -35,7 +35,8 @@ module.exports = (readStream, filename) => {
 
   //runs once the end of the file is reached
   rl.on("close", function() {
-    calculateSlices(pizzas, filename);
+    //calculateSlices(pizzas, filename);
     //sort(pizzas);
+    console.log(sort(pizzas));
   });
 };

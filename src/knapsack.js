@@ -10,7 +10,7 @@ w.unshift(0);
 let C = parseInt(lineOne[0], 10);
 let n = parseInt(lineOne[1], 10);
 let result = 0;
-let solution = [];
+let selected = [];
 const arr = new Array(C).fill(null).map(() => new Array(n).fill(null));
 
 const KS = (n, C) => {
@@ -31,3 +31,5 @@ const KS = (n, C) => {
 };
 
 console.log(KS(n, C));
+selected = [...new Set(selected)];
+console.log(selected);
